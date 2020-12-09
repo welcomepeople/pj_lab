@@ -1,5 +1,4 @@
 //import java.util.ArrayList;
-import java.io.*;
 
 public class Kolekcija <T extends Traka>{
 		
@@ -22,16 +21,11 @@ public class Kolekcija <T extends Traka>{
 	
 	public void dodaj (T traka)
 	{
-		try
-		{
 		if(trenTr<maxTr)
 			tr[trenTr++]=traka;
 		else
-			throw new Exception ("Ne moze dodati vise traka!");
-		}
-		catch (Exception e)
 		{
-			System.out.println(e);
+			System.out.println("Ne moze dodati vise traka!");
 		}
 	}
 	
@@ -48,11 +42,5 @@ public class Kolekcija <T extends Traka>{
 	
 	public <T> void staniSRadom(int i)	{
 		tr[i-1].staniSRadom();
-	}
-	
-	public <T> void citajIzTxt(String imeDat, BufferedReader bdat)
-	{
-			for(int i=0; i<trenTr; i++)
-				tr[i].citajIzTxt(imeDat, bdat);
 	}
 }

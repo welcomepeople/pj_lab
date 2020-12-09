@@ -14,18 +14,11 @@ public class Lizalice extends Traka {
 	@Override
 	public void pocniSRadom(int kol) {
 		// TODO Auto-generated method stub
-		try {
-		
-			this.start();
-			if(kol>maxKap)
-				throw new MaximumCapacityExceeded("Kapacitet trake je premasen, molim Vas pozovite "+imeS+"\n");
-			else
-				System.out.println("Napravljeno je " + kol/15 + " lizalica.\n");
-		}
-		catch(MaximumCapacityExceeded e)
-		{
-			System.out.println(e);
-		}
+		this.start();
+		System.out.println("Napravljeno je " + kol/15 + " lizalica.");
+		if(kol>maxKap)
+			System.out.println("Molim Vas zovite " + imeS +".");
+		System.out.println("\n");
 	}
 	
 }
